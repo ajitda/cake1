@@ -1,4 +1,5 @@
 <div class="row">
+<?php echo $this->Flash->render('message'); ?>
 <h2>View All Posts <?php echo $this->Html->link('ADD POST', ['action'=>'add'], ['class'=> 'btn btn-primary pull-right']); ?></h2>
 
 <table class="table table-hover">
