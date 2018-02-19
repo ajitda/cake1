@@ -16,7 +16,15 @@
     <tr class="table-active">
       <td><?php echo $post->title; ?></td>
       <td><?php echo $post->description; ?></td>
-      <td></td>
+      <td>
+          <?php echo $this->html->link('view', ['action'=>'view', $post->id], ['class'=> 'btn btn-primary']); ?>
+          <?php echo $this->html->link('edit', ['action'=>'Edit', $post->id], ['class'=> 'btn btn-warning']); ?>
+          <?php echo $this->Form->postLink(
+          'Delete', ['action'=> 'delete', $post->id], 
+          ['class'=> 'btn btn-danger'],
+          ['confirm'=> 'Are you Sure?']); 
+          ?>
+      </td>
     </tr>
     <?php endforeach; ?>
     <?php else: ?>
