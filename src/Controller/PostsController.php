@@ -18,7 +18,7 @@ class PostsController extends AppController
 	public function add()
 	{
 		$post = $this->Posts->newEntity();
-		if($this->request->is($post)){
+		if($this->request->is('post')){
 			$post = $this->Posts->patchEntity($post, $this->request->getData());
 			if($this->Posts->save($post)){
 				$this->Flash->success('Post Added Successfully', ['key'=> 'message']);

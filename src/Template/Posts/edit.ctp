@@ -1,6 +1,6 @@
-<?php echo $this->Form->edit($post); ?>
+<?php echo $this->Form->create($post); ?>
   <fieldset>
-    <legend>Add Post</legend>
+    <legend>Edit Post</legend>
     <div class="form-group">
       <?php echo $this->Form->input('title', ['class'=> 'form-control', 'id'=>'title', 'placeholder'=>'Title']); ?>
       
