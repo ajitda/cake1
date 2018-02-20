@@ -2,13 +2,18 @@
 
 namespace App\Controller;
 use App\Controller\AppController;
-
+use Cake\Routing\Router;
 /**
 * 
 */
 class PostsController extends AppController
 {
-	
+	public function initialize()
+	{
+		parent::initialize();
+		$this->loadModel('')
+	}
+
 	public function index()
 	{
 		$this->set('posts', $this->Posts->find('all'));
