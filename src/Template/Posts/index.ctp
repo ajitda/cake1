@@ -7,6 +7,7 @@
     <tr>
       <th scope="col">Title</th>
       <th scope="col">Description</th>
+      <th scope="col">Image</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
     <tr class="table-active">
       <td><?php echo $post->title; ?></td>
       <td><?php echo $post->description; ?></td>
+      <td><img src="<?php echo $post->path; ?>" alt="" width="150"/></td>
       <td>
           <?php echo $this->html->link('view', ['action'=>'view', $post->id], ['class'=> 'btn btn-primary']); ?>
           <?php echo $this->html->link('edit', ['action'=>'Edit', $post->id], ['class'=> 'btn btn-warning']); ?>
