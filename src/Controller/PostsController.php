@@ -33,11 +33,16 @@ class PostsController extends AppController
 				//print_r($url);
 				//exit();
 				$tmp_file = $this->request->data['file']['tmp_name'];
+				
 				if(move_uploaded_file($tmp_file, $current_file)){
 					$post = $this->Posts->newEntity();
 					$post->title = $this->request->data['title'];
 					$post->description = $this->request->data['description'];
+
 					$post->path = $url;
+					$category = implode(',', $this->request->data['category']);
+					$post->category = $category;
+
 					$post->created= date("Y-m-d H:i:s");
 					$post->modified= date("Y-m-d H:i:s");
 					if($this->Posts->save($post)){

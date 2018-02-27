@@ -1194,3 +1194,56 @@ Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
 
 
 
+2018-02-27 05:05:24 Error: [ParseError] syntax error, unexpected ';', expecting ',' or ')'
+Request URL: /posts/add
+Referer URL: http://localhost/cakephp/
+Stack Trace:
+#0 G:\xampp\htdocs\cakephp\vendor\composer\ClassLoader.php(301): Composer\Autoload\includeFile('G:\\xampp\\htdocs...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controller\\...')
+#2 [internal function]: spl_autoload_call('App\\Controller\\...')
+#3 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Core\App.php(152): class_exists('App\\Controller\\...')
+#4 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Core\App.php(64): Cake\Core\App::_classExistsInBase('\\Controller\\Pos...', 'App')
+#5 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(88): Cake\Core\App::className('Posts', 'Controller', 'Controller')
+#6 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(36): Cake\Http\ControllerFactory->getControllerClass(Object(Cake\Http\ServerRequest))
+#7 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Http\BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 G:\xampp\htdocs\cakephp\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Http\Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 G:\xampp\htdocs\cakephp\webroot\index.php(40): Cake\Http\Server->run()
+#21 {main}
+
+
+2018-02-27 06:00:09 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "panels"
+Request URL: /debug-kit/panels/view/undefined
+Referer URL: http://localhost/cakephp/debug-kit/toolbar/c336e835-3e78-406a-8869-2099ed761774
+Stack Trace:
+#0 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\ORM\Table.php(1445): Cake\ORM\Query->firstOrFail()
+#1 G:\xampp\htdocs\cakephp\vendor\cakephp\debug_kit\src\Controller\PanelsController.php(95): Cake\ORM\Table->get(Array)
+#2 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Controller\Controller.php(440): DebugKit\Controller\PanelsController->view('undefined')
+#3 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#4 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(DebugKit\Controller\PanelsController))
+#5 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Http\BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 G:\xampp\htdocs\cakephp\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 G:\xampp\htdocs\cakephp\vendor\cakephp\cakephp\src\Http\Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 G:\xampp\htdocs\cakephp\webroot\index.php(40): Cake\Http\Server->run()
+#18 {main}
+
+

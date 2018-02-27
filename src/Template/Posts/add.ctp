@@ -8,7 +8,7 @@
 
 
     <div class="form-group">
-      <?php echo $this->Form->input('description', ['class'=> 'form-control', 'id'=>'description', 'placeholder'=>'description']); ?>
+      <?php echo $this->Form->textarea('description', ['class'=> 'form-control', 'id'=>'description', 'placeholder'=>'description']); ?>
       
     </div>
 
